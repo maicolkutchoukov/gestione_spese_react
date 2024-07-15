@@ -206,58 +206,7 @@ const App = () => {
           </div>
         )}
       </div>
-      <div className="container">
-        <h1>Aggiungi Spesa/Entrata</h1>
-        <form onSubmit={addExpense}>
-          <div>
-            <label htmlFor="description">Descrizione:</label>
-            <input
-              type="text"
-              value={newExpense.description}
-              onChange={(e) => setNewExpense({ ...newExpense, description: e.target.value })}
-              id="description"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="amount">Importo:</label>
-            <input
-              type="number"
-              value={newExpense.amount}
-              onChange={(e) => setNewExpense({ ...newExpense, amount: e.target.value })}
-              id="amount"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="date">Data:</label>
-            <input
-              type="date"
-              value={newExpense.date}
-              onChange={(e) => setNewExpense({ ...newExpense, date: e.target.value })}
-              id="date"
-              required
-            />
-          </div>
-          <div>
-            <label htmlFor="category">Categoria:</label>
-            <select
-              value={newExpense.category_id}
-              onChange={(e) => setNewExpense({ ...newExpense, category_id: e.target.value })}
-              id="category"
-              required
-            >
-              <option disabled value="">Seleziona una categoria</option>
-              {categories.map((category) => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
-          </div>
-          <button type="submit">Aggiungi</button>
-        </form>
-      </div>
+      
     </main>
   );
 };
